@@ -47,7 +47,7 @@ And at the end it, will shutdown the pc.
 
 ### Once the installation began, can I leave the pc alone for the night?
 
-Yes. The script it's made that once the installation ends it will automatically shutdown the pc.
+Yes. The script it's made that once the installation ends it will automatically shutdowns the pc.
 
 ### Why did you do it?
 
