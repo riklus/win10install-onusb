@@ -20,7 +20,7 @@ I took inspiration for writing this script from [this guide](https://decryptingt
 3. Copy `wininstall.bat` file *from this repo* to the Installation medium.
 4. Shutdown the computer.
 5. **Boot the pc from the installation medium.**
-6. Proceed to install Windows 10 as usual but stop after accepting the Microsoft's License Conditions.
+6. Proceed to install Windows 10 as usual but stop after accepting the Windows License Conditions.
 7. Press `shift+f10` to open up a cmd window.
 8. Launch the script: `C:\wininstall.bat` and follow the instructions on the screen.
 
@@ -29,7 +29,7 @@ I took inspiration for writing this script from [this guide](https://decryptingt
 ### Things to pay attention
 
 Be sure to select the right *Target drive*.  
-Be sure to Accept Microsoft's License Conditions before launching the script.  
+Be sure to Accept Windows License Conditions before launching the script.  
 Be sure to enter the *Target drive* size correctly, if unsure subtract a few MB from the number before entering it.  
 
 ## FAQ
@@ -47,7 +47,7 @@ And at the end it, will shutdown the pc.
 
 ### Once the installation began, can I leave the pc alone for the night?
 
-Yes. The script it's made that once the installation ends it will automatically shutdowns the pc.
+Yes. The script it's made that once the installation ends it will automatically shutdown the pc.
 
 ### Why did you do it?
 
@@ -55,5 +55,5 @@ I have a Macbook with low disk space, and I needed an automatic way to install W
 
 ### Does it work for Windows 11?
 
-I don't know. Sorry.
+I don't know. Sorry :/.
 
