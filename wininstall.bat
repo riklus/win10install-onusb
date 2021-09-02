@@ -13,10 +13,12 @@ set re_image_size=5000
 ::
 title "Windows Installation Script"
 echo,
-echo - Windows Installation Script -
-echo      Made w/ l0v3 by riklus
 echo,
-echo This script enables you to install Windows 10 onto a usb drive/hardisk.
+echo,
+echo                   - Windows Installation Script -
+echo                       Made w/ l0v3 by riklus
+echo,
+echo This script enables you to install Windows 10 on an usb drive/hardisk.
 echo Execute this script AFTER accepting the Windows license conditions.
 echo Remember to pay close attention to the disk selection dialog.
 echo Look me up on Github :)
@@ -26,14 +28,22 @@ echo Look me up on Github :)
 ::
 :: Input size section
 ::
+:: writing diskpart script
+echo list disk > X:\diskpart_list
+
 echo,
-echo - Disk size -
 echo,
-echo You will be installing Windows onto a usb drive/hardisk.
-echo In order to calculate the Windows partiton size you must first enter your disk size, on which you will be installing Windows.
+echo                            - Disk size -
+
+diskpart /s X:\diskpart_list
+echo,
+echo You will be installing Windows on an usb drive/hardisk.
+echo In order to calculate the Windows partiton size, you must first enter the size of the disk
+echo on which you will be installing Windows.
+echo,
 set /p d_size=Enter the size of the target disk (MB): 
 set /a win_partition_size=d_size-win_re_tools_size-EFI_size-msr_size-re_image_size > nul
-echo The Windows partiton size will be %win_partition_size% MB.
+echo [i] The Windows partiton size will be %win_partition_size% MB.
 
 
 
@@ -42,15 +52,13 @@ echo The Windows partiton size will be %win_partition_size% MB.
 ::
 title "Disk selection"
 
-:: writing diskpart script
-echo list disk > X:\diskpart_list
-
 :Disk_selection
 echo,
-echo - Disk selection -
 echo,
+echo                          - Disk selection -
 
 diskpart /s X:\diskpart_list
+echo,
 set /p x= Select disk number to ERASE: 
 set /p c= Are you sure to ERASE ALL DATA ON DISK n. %x%? [y,n]: 
 if "%c%" neq "y" goto Disk_selection
@@ -123,6 +131,8 @@ diskpart /s X:\diskpart_create
 if %ERRORLEVEL% neq 0 (
     del X:\diskpart_create
     echo [!] Error partitioning disk.
+    echo,
+    pause
     exit
 )
 
