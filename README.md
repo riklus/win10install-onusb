@@ -26,7 +26,7 @@ I took inspiration for writing this script from [this guide](https://decryptingt
 
 **Done.**
 
-### Things to pay attention
+### Things to pay attention to
 
 Be sure to select the right *Target drive*.  
 Be sure to Accept Windows License Conditions before launching the script.  
