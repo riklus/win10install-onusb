@@ -43,7 +43,7 @@ For those who want a Windows 10 to go, or have very low internal hardisk space.
 This script will install Windows 10 on the *Target drive*:  
 It will ERASE all data from the *Target drive* then it will proceed to partition it, like the official Windows 10 installer would do.  
 Then it will install Windows 10 on the *Target drive*.  
-And at the end it, will shutdown the pc.
+And at the end, it will shutdown the pc.
 
 ### Once the installation began, can I leave the pc alone for the night?
 
@@ -55,5 +55,5 @@ I have a Macbook with low disk space, and I needed an automatic way to install W
 
 ### Does it work for Windows 11?
 
-I don't know. Sorry :/.
+I don't know. Sorry :/
 
